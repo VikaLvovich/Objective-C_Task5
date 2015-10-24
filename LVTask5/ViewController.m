@@ -61,6 +61,17 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *s;
+    s = [dataBasket objectAtIndex:indexPath.row];
+    UIAlertView *messageAlert = [[UIAlertView alloc] initWithTitle:@"Fruit selected" message:s delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    
+    // Display Alert Message
+    [messageAlert show];
+    
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
